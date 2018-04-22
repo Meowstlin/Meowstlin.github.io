@@ -1,0 +1,143 @@
+body{
+  margin:0px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.centered-container{
+  position: fixed;
+  width: 800px;
+  height: 50vh;
+  opacity: .8;
+  background-color: white;
+  margin: auto;
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+  margin-top: -25vh; /* Negative half of height. */
+  margin-left: -400px; /* Negative half of width. */
+}
+
+#p2-container{
+  /* display: none; */
+  position: relative;
+  width: 800px;
+  height: 80vh;
+  opacity: .8;
+  background-color: white;
+  margin: auto;
+  z-index: 1;
+  border-radius: 100px;
+}
+
+#p2-text-container{
+  position: absolute;
+  width: 600px;
+  height: 70vh;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#title {
+  font-size: 60px;
+}
+
+b {
+  cursor: pointer;
+  color: #5603b5;
+  color: #028bb5;
+}
+
+#top {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+#me {
+  /* background-image: url("../img/me.jpg"); */
+  /* display: none; */
+  position: absolute;
+  /* z-index: 100; */
+  opacity: 1;
+  border: 5px solid #ddd;
+  height: 300px;
+  /* width: 400px; */
+  border-radius: 50%;
+  right: 5vw;
+  top: 5vh;
+  z-index: 2;
+}
+
+#p1-text-container {
+  width: 800px;
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 60px;
+}
+
+#joke {
+  font-size: 18px;
+}
+
+svg {
+  position: relative;
+  bottom: -40vh;
+  left: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  animation: pulse_opacity 1s ease-in-out 0s infinite;
+}
+
+@keyframes pulse_opacity {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
+#close {
+	color: white;
+	font: 36px/100% arial, sans-serif;
+  	position: absolute;
+	right: 20px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+	top: 20px;
+	z-index: 4;
+}
+
+#overlay {
+	background: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 3;
+	top: 0px;
+	left: 0px;
+}
+
+#resume-box{
+  position: absolute;
+  overflow: auto;
+  height: 80vh;
+  width: 800px;
+  top:10vh;
+  left: 100px;
+  margin: auto;
+  z-index: 5;
+}
+
+#resume{
+  position: relative;
+  width: 800px;
+}

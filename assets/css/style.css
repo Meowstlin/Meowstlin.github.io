@@ -19,7 +19,6 @@ body{
 }
 
 #p2-container{
-  /* display: none; */
   position: relative;
   width: 800px;
   height: 80vh;
@@ -31,7 +30,6 @@ body{
 }
 
 #p3-container{
-  /* display: none; */
   position: relative;
   width: 800px;
   height: 50vh;
@@ -62,8 +60,6 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin:auto;
-  top: 100px; */
 }
 
 #title {
@@ -82,14 +78,10 @@ b {
   margin: 50px;
 }
 #me {
-  /* background-image: url("../img/me.jpg"); */
-  /* display: none; */
   position: absolute;
-  /* z-index: 100; */
   opacity: 1;
   border: 5px solid #ddd;
   height: 300px;
-  /* width: 400px; */
   border-radius: 50%;
   right: 5vw;
   top: 5vh;

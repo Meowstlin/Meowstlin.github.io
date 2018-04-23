@@ -4,8 +4,11 @@ $(document).ready(function() {
   $("#2").backstretch("assets/img/sunset.jpg");
   $("#1").backstretch("assets/img/docks.jpg");
   $(".centered-container").css('border-radius', "" + $(".centered-container").height() / 2 + "px");
+  $("#p3-container").css('border-radius', "" + $("#p3-container").height() / 2 + "px");
   $("svg").css('left', "" + (Number($("svg").css('left').replace("px", "")) - 30) + "px");
   $("p2-container").hide();
+  $("#resume-box").hide();
+  $("#error-box").hide();
   $("me").hide();
 
   $(window).resize(function(){
@@ -25,6 +28,8 @@ $(document).ready(function() {
 
   $("#overlay, #close").click(function() {  // jQuery Function Number 2
 		$("#lightbox").hide();
+    $("#resume-box").hide();
+    $("#error-box").hide();
 	})
 
   $('#1').on ('mousewheel', function (e) {
@@ -55,8 +60,35 @@ $(document).ready(function() {
   });
 
   $("#lightbox").hide();
+  var i = 0;
+  $(".arrow-left").hover(function(){
+    console.log("hovering");
+    if (i % 2 == 0){
+      $("p").remove(".temp");
+      $("#p3-text-container").append("<p class='temp'> Go to Blog</p>");
+    } else {
+      $("p").remove(".temp");
+    }
+    i = (i + 1) % 2;
+  });
 
+  $(".arrow-right").hover(function(){
+    console.log("hovering");
+    if (i % 2 == 0){
+      $("p").remove(".temp");
+      $("#p3-text-container").append("<p class='temp'> Go to Projects</p>");
+    } else {
+      $("p").remove(".temp");
+    }
+    i = (i + 1) % 2;
+  });
 
+  $(".arrow-right, .arrow-left").click(function(){
+    $("#lightbox").show();
+    $("#error-box").show();
+    var string = ($(window).width() - 600)/2 + "px";
+    $("#error-box").css({left: string});
+  });
 
 
 });

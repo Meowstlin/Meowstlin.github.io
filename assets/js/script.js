@@ -65,7 +65,7 @@ $(document).ready(function() {
     console.log("hovering");
     if (i % 2 == 0){
       $("p").remove(".temp");
-      $("#p3-text-container").append("<p class='temp'> Go to Blog</p>");
+      $("#p3-text-container").append("<p class='temp'> Go to Blog</p>");  // jQuery Function Number 6
     } else {
       $("p").remove(".temp");
     }
